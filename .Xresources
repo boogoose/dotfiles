@@ -13,7 +13,7 @@ XTerm*pointerColor:      #1ABB9B
 !Xterm*faceName:          Droid Sans Mono for Powerline Nerd Font    
 !Xterm*faceName:          SF Mono Regular Nerd Font Complete
 !Xterm*facename:        Meslo LG L Regular Nerd Font Complete 
-XTerm*facename:         DejaVu Sans Mono Nerd Font
+!XTerm*facename:         DejaVu Sans Mono Nerd Font
 XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
@@ -61,9 +61,12 @@ XTerm*selectToClipboard: true
  Xcursor.theme: xcursor-breeze
  Xcursor.size:                     0
 
-URxvt.font:                     xft:DejaVu Sans Mono Nerd Font:size=11
+!URxvt.font: Droid Sans Mono For Powerline Nerd Font:size=11
+! URxvt.font: xft:Fira Code Regular Nerd Font Complete Mono:pixelsize=12,xft:PowerlineSymbols:pixelsize=12,xft
+!URxvt.font:                     xft:DejaVu Sans Mono Nerd Font:size=11
+!URxvt.font:                     xft:DejaVu Sans Mono Nerd Font Complete:size=11
 ! URxvt.font:                    xft:Dejavu Sans Mono for Powerline:size=11 
-! URxvt.font:                     xft:Droid Sans Mono for Powerline Nerd Font:size=11
+ URxvt.font:                     xft:Droid Sans Mono for Powerline Nerd Font:size=11
 !URxvt.font:                     xft:SF Mono Regular Nerd Font Complete:size=11
 !URxvt.font:                     xft:Meslo LG L Regular Nerd Font Complete:size=11 
 ! 

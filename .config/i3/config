@@ -9,6 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Start Compositor
+exec_always --no-startup-id picom
+
 set $mod Mod4
 
 # Configure / or gaps(?)
@@ -75,7 +78,7 @@ bindsym $mod+Shift+q kill
 
 # commented out as "i3-dmenu-desktop" not launching syncthing - whereas "dmenu_run" appears to do so
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Hack-13'
 
 # change focus
 bindsym $mod+j focus left

@@ -20,6 +20,7 @@ set -o vi           # Enable vi mode
 
 alias ls='ls --color=auto'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias rm='trash-put'
 
 #########################################################################################
 #                                  EXports                                              #
@@ -28,6 +29,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger config
 export PATH="${PATH}:/home/andrew/.local/bin:/usr/bin"
 export EDITOR=nvim                  
+export TERMINAL=alacritty               # Variable used by I3wm
 
 #########################################################################################
 #                                  Archive EXtraction                                   # 
@@ -68,6 +70,7 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
+
 
 
 
