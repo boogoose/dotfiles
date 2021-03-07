@@ -6,7 +6,7 @@
 #                  APPETIZERS                                       #
 #####################################################################
 
-~/.fehbg &          # Set wallpaper
+# ~/.fehbg &          # Set wallpaper
 udiskie -t &        # Start udiskie - with system tray icon
 xset +fp ~/.local/share/fonts/  # Prepend custom font path to Xorg's list of known font paths
 

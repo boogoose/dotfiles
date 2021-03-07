@@ -2,3 +2,11 @@
 
 # xrandr --output Virtual1 --mode 1600x1200     # Set display parameters in Virtualbox
 xset r rate 400 40                              # Set typematic delay
+
+# Stop screen from going blank - courtesy chris@machine
+xset s off
+xset -dpms
+xset s noblank
+
+feh --bg-fill --randomize ~/Pictures/wallpaper/* &
+

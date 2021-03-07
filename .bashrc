@@ -30,6 +30,14 @@ export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger co
 export PATH="${PATH}:/home/andrew/.local/bin:/usr/bin"
 export EDITOR=nvim                  
 export TERMINAL=alacritty               # Variable used by I3wm
+export MANPAGER="nvim -c 'set ft=man' -"
+
+#########################################################################################
+#                                  Source                                               #
+#########################################################################################
+
+source /usr/share/fzf/completion.bash   # fzf completion
+source /usr/share/fzf/key-bindings.bash # fzf keybindings
 
 #########################################################################################
 #                                  Archive EXtraction                                   # 
@@ -70,7 +78,3 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
-
-
-
-

@@ -12,6 +12,9 @@
 # Start Compositor
 exec_always --no-startup-id picom
 
+# Start autotiling
+exec_always --no-startup-id autotiling
+
 set $mod Mod4
 
 # Configure / or gaps(?)
