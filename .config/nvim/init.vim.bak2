@@ -1,0 +1,65 @@
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+"source ~/.vimrc
+" exists('g:vscode')
+
+" autocmd VimEnter * hi Normal ctermbg=none   " transparent backgrounf for gruvbox?
+"Set hybrid/absolute auto-switching line lnumbers
+:set number relativenumber
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
+set nocompatible        " changes necessary for VimWiki
+set t_Co=256
+" set background=dark
+" colorscheme delek
+syntax enable
+nnoremap H :set cursorline! cursorcolumn!<CR>
+hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
+set showcmd             " Display active command (specifically for mapleader)
+set formatoptions-=cro  " Stop newline continution of comments
+set splitbelow          " Horizontal splits will automatically be below
+set splitright          " Vertical splits will automatically be to the right
+"set nobackup            " This is recommended by coc
+"set nowritebackup       " This is recommended by coc
+
+set ruler               " Find the cursor!
+" set colorcolumn=80
+set tabstop=4
+set softtabstop=4
+set expandtab
+set smarttab            " Makes tabbing smarter will realize you have 2 vs 4
+set smartindent         " Makes indenting smart
+set autoindent          " Good auto indent
+set laststatus=2        " Always display the status line
+set cursorline          " Enable highlighting of the current line
+filetype plugin on      " changes necessary for VimWiki
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ","
+let g:airline_powerline_fonts = 1
+
+" cmap w!! w !sudo tee %  
+
+" let g:python3_host_prog = '/usr/bin/python3'
+"-------------------------System clipboard access--------------------
+vnoremap <C-c> "+y
+map <C-v> "+P
+
+" Paste to Primary Selection in addition to System Clipboard
+vnoremap <C-c> "+y :let @+=@*<CR>
+
+"--------------------------------------------------------------------
+"Set <j> <k> to natural movement by apparent screen line rather than file
+"line.
+nnoremap j gj
+nnoremap k gk
+
+"Fancy Symbols - for powerline
+let g:Powerline_symbols = "fancy"
+
+" Example key remap using mapleader key
+noremap <leader>w :w<cr>
+
