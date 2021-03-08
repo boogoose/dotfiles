@@ -27,7 +27,7 @@ alias rm='trash-put'
 #########################################################################################
 
 export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger config
-export PATH="${PATH}:/home/andrew/.local/bin:/usr/bin"
+export PATH="${PATH}:/home/andrew/.local/bin:/usr/bin:$HOME/.local/scripts
 export EDITOR=nvim                  
 export TERMINAL=alacritty               # Variable used by I3wm
 export MANPAGER="nvim -c 'set ft=man' -"
