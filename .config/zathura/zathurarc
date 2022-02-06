@@ -1,0 +1,2 @@
+#Enable copy to clipboard as per archwiki
+set selection-clipboard clipboard

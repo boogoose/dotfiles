@@ -18,9 +18,9 @@ syntax enable
 "let skip_defaults_vim=1
 set background=dark 
 colorscheme delek
-set tabstop=4                   " Tab
-set softtabstop=4               "Effective tab while editing.
-set expandtab                   " Tabs are space
+"xset tabstop=4                   " Tab
+"xset softtabstop=4               "Effective tab while editing.
+"xset expandtab                   " Tabs are space
 
 "Set hybrid/absolute auto-switching line lnumbers
 

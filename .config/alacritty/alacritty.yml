@@ -29,27 +29,30 @@ colors:
     cyan: "#29B8DB"
     white: "#ECEFF4"
 
-background_opacity: 0.8
-
+      #background_opacity: 0.8
+window.opacity: 0.4
+      
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Hack
+    #family: Hack $STEALTH
+    family: Hack Stealth
+
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: Hack
+    family: Hack Stealth
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: Hack
+    family: Hack Stealth
     # Style can be specified to pick a specific face.
     # style: Italic
-  size: 12.0
+  size: 14.0
 
   offset:
     x: 0
@@ -81,7 +84,7 @@ key_bindings:
   - { key: C, mods: Control|Shift, action: Copy }
   - { key: Key0, mods: Control, action: ResetFontSize }
   - { key: Equals, mods: Control, action: IncreaseFontSize }
-  # - { key: Add, mods: Control, action: IncreaseFontSize }
-  # - { key: Subtract, mods: Control, action: DecreaseFontSize }
+    #- { key: +, mods: Control, action: IncreaseFontSize }
+    #- { key: Subtract, mods: Control, action: DecreaseFontSize }
   - { key: Minus, mods: Control, action: DecreaseFontSize }
   - { key: N, mods: Control, action: SpawnNewInstance }

@@ -14,6 +14,7 @@ XTerm*pointerColor:      #1ABB9B
 !Xterm*faceName:          SF Mono Regular Nerd Font Complete
 !Xterm*facename:        Meslo LG L Regular Nerd Font Complete 
 !XTerm*facename:         DejaVu Sans Mono Nerd Font
+XTerm*facename:			Iosevka
 XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
@@ -86,8 +87,8 @@ URxvt*saveLines:                  5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true
- URxvt*transparent:              true
- URxvt*shading:                  20 
+!URxvt*transparent:              true
+! URxvt*shading:                  20 
 
 ! Normal copy-paste keybindings without perls - Note: commented out as changed elsewhere.
 ! URxvt.iso14755:                   false

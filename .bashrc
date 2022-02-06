@@ -26,13 +26,22 @@ alias rm='trash-put'
 #                                  EXports                                              #
 #########################################################################################
 
+export COMPUTER=desktop
+#export COMPUTER=laptop
+#export COMPUTER=VM
+export FONTCONFIG_PATH=/etc/fonts
+export QT_QPA_PLATFORMTHEME=qt5ct
 export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger config
-export PATH="${PATH}:/home/andrew/.local/bin:/usr/bin"
-# export PATH="${PATH}:/home/andrew/.local/bin:/home/andrew/.local/scripts:/usr/bin"
 export EDITOR=nvim                  
+export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:/usr/bin"
 export TERMINAL=alacritty               # Variable used by I3wm
-export MANPAGER="nvim -c 'set ft=man' -"
-
+#export MANPAGER="nvim -c 'set ft=man' -"	#stopped using - overstriking display issues
+###
+if [[ "$(command -v nvim)" ]]; then		# https://jdhao.github.io/2020/11/11/nifty_nvim_techniques_s8/
+    export EDITOR='nvim'
+    export MANPAGER='nvim +Man!'
+    export MANWIDTH=999
+fi
 #########################################################################################
 #                                  Source                                               #
 #########################################################################################
@@ -50,6 +59,7 @@ ex ()
 {
   if [ -f $1 ] ; then
     case $1 in
+      *.tar.xz)	   tar xf $1	;;		# TODO: this doesn't work for some reason
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.bz2)       bunzip2 $1   ;;
@@ -68,14 +78,23 @@ ex ()
   fi
 }
 
-#########################################################################################
-#                                  Powerline Shell                                      #
-#########################################################################################
+##########################################################################################
+##                                  Powerline Shell                                      #
+##########################################################################################
+#
+#function _update_ps1() {
+#	PS1=$(powerline-shell $?)
+#}
+#
+#if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+#	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
 
-function _update_ps1() {
-	PS1=$(powerline-shell $?)
-}
+##########################################################################################
+#                                  Starship Prompt                                       #
+##########################################################################################
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+
+eval "$(starship init bash)"
+
+

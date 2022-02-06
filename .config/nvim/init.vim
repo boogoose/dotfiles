@@ -31,15 +31,14 @@ set splitbelow          " Horizontal splits will automatically be below
 set splitright          " Vertical splits will automatically be to the right
 set nobackup            " This is recommended by coc
 set nowritebackup       " This is recommended by coc
-
 set ruler               " Find the cursor!
 " set colorcolumn=80
 set tabstop=4
-set softtabstop=4
-set expandtab
-set smarttab            " Makes tabbing smarter will realize you have 2 vs 4
-set smartindent         " Makes indenting smart
-set autoindent          " Good auto indent
+" set softtabstop=4
+" set expandtab
+" set smarttab            " Makes tabbing smarter will realize ysu have 2 vs 4
+" set smartindent         " Makes indenting smart
+" set autoindent          " Good auto indent
 set laststatus=2        " Always display the status line
 set cursorline          " Enable highlighting of the current line
 filetype plugin on      " changes necessary for VimWiki
@@ -113,7 +112,10 @@ source $HOME/.config/nvim/snippets/coc-snippets.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/vimwiki.vim
 
 "--------------------------------------------------------------------
 
 endif
+        
+
