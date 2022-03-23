@@ -29,30 +29,31 @@ colors:
     cyan: "#29B8DB"
     white: "#ECEFF4"
 
-      #background_opacity: 0.8
-window.opacity: 0.4
       
 font:
   # The normal (roman) font face to use.
   normal:
     #family: Hack $STEALTH
-    family: Hack Stealth
+    #family: Hack Stealth
+    family: Iosevka
 
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: Hack Stealth
+    #family: Hack Stealth
+    family: Iosevka
     # Style can be specified to pick a specific face.
-    # style: Bold
+    style: Bold
 
   # The italic font face
   italic:
-    family: Hack Stealth
+    #family: Hack Stealth
+    family: Iosevka
     # Style can be specified to pick a specific face.
-    # style: Italic
-  size: 14.0
+    style: Italic
+  size: 16.0
 
   offset:
     x: 0
@@ -61,6 +62,8 @@ font:
     x: 0
     y: 0
 window:
+  opacity: 0.8
+
   padding:
     x: 2
     y: 2

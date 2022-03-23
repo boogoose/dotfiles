@@ -903,7 +903,7 @@
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-#freetype-font=Serif Bold
+freetype-font=DejaVu Sans
 
 # Monospace Font (string)
 #freetype-monofont=Monospace
@@ -3827,7 +3827,7 @@ sout-chromecast-show-perf-warning=0
 #qt-minimal-view=0
 
 # Systray icon (boolean)
-qt-system-tray=0
+#qt-system-tray=1
 
 # Show notification popup on track change (integer)
 #qt-notification=1
@@ -4152,7 +4152,7 @@ qt-privacy-ask=0
 #audio-language=
 
 # Subtitle language (string)
-#sub-language=
+sub-language=English
 
 # Menu language (string)
 #menu-language=

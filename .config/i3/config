@@ -487,8 +487,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 set $bg-color	 #000000bb
-#set $fg-color	 #ffffff
-
+set $fg-color	 #ffffff
 #
 # Main monitor
 #
@@ -512,7 +511,7 @@ colors {
 		# font pango: Iosevka Term Bold Oblique 15
 
 
-		#font Iosevka Oblique 15
+		#font pango: Iosevka Oblique 20
 		font pango: Iosevka 15
 
 		#strip_workspace_numbers yes

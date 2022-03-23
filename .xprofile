@@ -29,6 +29,7 @@ fi
 xset +fp ~/.local/share/fonts/  # Prepend custom font path to Xorg's list of known font paths
 xset r rate 400 40             	# Set typematic delay
 
+export QT_QPA_PLATFORMTHEME=qt5ct
 ###################################################################################################
 
 #xrandr --output Virtual1 --mode 1600x1200     # Set display parameters in Virtualbox

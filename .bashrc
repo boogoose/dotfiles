@@ -42,6 +42,7 @@ if [[ "$(command -v nvim)" ]]; then		# https://jdhao.github.io/2020/11/11/nifty_
     export MANPAGER='nvim +Man!'
     export MANWIDTH=999
 fi
+export XDG_DATA_HOME=$HOME/.local/share
 #########################################################################################
 #                                  Source                                               #
 #########################################################################################
