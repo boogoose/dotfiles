@@ -1,0 +1,21 @@
+#!/bin/sh
+
+export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts"
+
+export EDITOR=nvim                  
+export VISUAL=nvim
+export TERMINAL=alacritty               
+export PAGER=less
+export READER=zathura
+export BROWSER=brave
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+export FONTCONFIG_PATH=/etc/fonts
+export QT_QPA_PLATFORMTHEME=qt5ct
+export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger config
+
