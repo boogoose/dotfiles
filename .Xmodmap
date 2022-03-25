@@ -6,3 +6,4 @@ setxkbmap -option caps:escape
 #Set keyboard layout to UK
 setxkbmap gb
 
+

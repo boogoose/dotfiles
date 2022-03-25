@@ -1,5 +1,20 @@
 #!/bin/bash
- 
+
+###################################################################################################
+#                                      Patching the lightdm deficit                               #
+###################################################################################################
+#
+#if [ $COMPUTER=x220 ] ; then
+#		source $HOME/.config/shell/Shell_Exports
+#		[ -f ~/.Xmodmap ] && . ~/.Xmodmap
+#fi
+#
+##################################################################################################
+#				       Startup                                                    #
+###################################################################################################
+
+source $HOME/.config/xorg/Xstartup
+
 ###################################################################################################
 #                                      Monitor tuning                                             #
 ###################################################################################################
@@ -13,13 +28,17 @@ xset s noblank
 #                                      Wallpaper                                                   #
 ####################################################################################################
 
-#feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* feh --bg-fill -randomize ~/Pictures/wallpaper1600x1200/* &
-#DISPLAY=:0.0 feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* &
-#DISPLAY=:0.1 feh --bg-fill --randomize ~/Pictures/wallpaper1200x1600/* &
-
 if [ $COMPUTER == "desktop" ]
 		then
 		feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* & #feh --bg-fill --randomize ~/Pictures/wallpaper1200x1600/* &
+		#feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* feh --bg-fill -randomize ~/Pictures/wallpaper1600x1200/* &
+		#DISPLAY=:0.0 feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* &
+		#DISPLAY=:0.1 feh --bg-fill --randomize ~/Pictures/wallpaper1200x1600/* &
+fi
+if [ $COMPUTER == "x220" ]
+		then
+		#feh --bg-fill ~/Pictures/Wallpaper/deserted.jpeg
+		feh --no-fehbg --bg-fill '/home/yousir/Pictures/Wallpaper/deserted.jpg' 
 fi
 
 ###################################################################################################
@@ -29,9 +48,7 @@ fi
 xset +fp ~/.local/share/fonts/  # Prepend custom font path to Xorg's list of known font paths
 xset r rate 400 40             	# Set typematic delay
 
-export QT_QPA_PLATFORMTHEME=qt5ct
 ###################################################################################################
-
 #xrandr --output Virtual1 --mode 1600x1200     # Set display parameters in Virtualbox
 #xrandr --output DVI-I-1 --mode 2560x1440
 #xrandr --output DVI-I-2 --mode 1600x1200 --rotate left
@@ -39,3 +56,4 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 ### Attempt to change tray icon size as per https://wiki.archlinux.org/title/HiDPI#Xorg
 # xrandr --output DVI-I-2 --scale 3x3 #this re-scaled entire screen!
+
