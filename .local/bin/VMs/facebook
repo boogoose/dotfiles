@@ -1,0 +1,6 @@
+#!/bin/bash
+#virsh start VMA-clone1b
+# alacritty -e sudo virsh start VMA-clone1b
+sudo /usr/bin/virsh start facebook
+exec i3-msg 'workspace 7:facebook ; exec virt-viewer -c qemu:///system facebook'
+#       

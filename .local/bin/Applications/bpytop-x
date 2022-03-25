@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec i3-msg 'workspace 16:bpytop; exec $TERMINAL -e bpytop'

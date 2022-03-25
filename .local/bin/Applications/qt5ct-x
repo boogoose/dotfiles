@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec i3-msg 'workspace 14:themes; exec qt5ct'

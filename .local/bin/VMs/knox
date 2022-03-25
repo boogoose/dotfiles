@@ -1,0 +1,5 @@
+#!/bin/bash
+#virsh start VMA-clone1b
+# alacritty -e sudo virsh start VMA-clone1b
+sudo /usr/bin/virsh start knox
+exec i3-msg 'workspace 8:knox  ; exec virt-viewer -c qemu:///system knox'

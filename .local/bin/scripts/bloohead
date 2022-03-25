@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+bluetoothctl power on
+bluetoothctl trust FC:A8:9A:A2:28:6A
+bluetoothctl disconnect FC:A8:9A:A2:28:6A
+bluetoothctl connect FC:A8:9A:A2:28:6A

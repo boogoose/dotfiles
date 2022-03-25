@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec i3-msg 'workspace 17:Keepass; exec keepassxc'

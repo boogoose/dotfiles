@@ -1,6 +1,8 @@
 #!/bin/sh
 
-export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts"
+export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/scripts:$HOME/.local/bin/Applications:$HOME/.local/bin/VMs"
+#export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/*"
+
 
 export EDITOR=nvim                  
 export VISUAL=nvim

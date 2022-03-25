@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec i3-msg 'workspace 15:qbittorrent; exec qbittorrent'

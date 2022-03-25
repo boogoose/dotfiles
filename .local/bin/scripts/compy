@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $COMPUTER == "desktop" ]
+then
+		echo "Desktop!"
+else
+		echo "not desktop"
+fi

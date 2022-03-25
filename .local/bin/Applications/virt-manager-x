@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+#alacritty -e virt-manager 
+#virt-manager
+exec i3-msg 'workspace 19:virtM; exec virt-manager'
+#exec i3-msg 'workspace 20; exec virt-manager; workspace 20'
+# 喝啕喙勇
+
+#exec --no-startup-id i3-msg 'workspace 20'
+#exec --no-startup-id i3-msg 'virt-manager'

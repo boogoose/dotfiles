@@ -1,0 +1,5 @@
+#!/bin/bash
+#virsh start VMA-clone1b
+# alacritty -e sudo virsh start VMA-clone1b
+sudo /usr/bin/virsh start loggo
+exec i3-msg 'workspace 5:loggo  ; exec virt-viewer -c qemu:///system loggo'

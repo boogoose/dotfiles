@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# config_file="$HOME/i3/config"
+# x220_config="$HOME/i3/config_x220"
+
+if [ $COMPUTER=x220 ] ; then
+		rm $HOME/.config/i3/config
+		touch $HOME/.config/i3/config
+		cat $HOME/.config/i3/config_x220 >> $HOME/.config/i3/config
+fi
+	
