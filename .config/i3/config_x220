@@ -210,8 +210,7 @@ bar {
 
 		#output DVI-I-2
 		#i3bar_command i3bar --transparency
-		#i3bar_command i3bar
-		status_command i3blocks -c ~/.config/.i3/.i3blocks.x220.conf
+		i3bar_command i3bar
 
 colors {
 			#foreground 	$fg-color
@@ -235,63 +234,8 @@ colors {
 
 
 		position	top
-        status_command i3blocks
+        #status_command i3blocks
+		status_command i3blocks -c ~/.config/i3/i3blocks.x220.conf
 
 }
-#bar {
-#		tray_output none
-#		output DVI-I-3
-#		status_command i3blocks -c ~/.config/i3/.i3blocks.conf.secondary
-#
-#
-#		# font pango: Iosevka Term Bold Oblique 15
-#
-#		font pango: Iosevka 15
-#
-#		position top
-#        #status_command i3blocks
-#
-#}
-##3rd bar
-#bar {
-#
-#		output DVI-I-3
-#		#i3bar_command i3bar --transparency
-#		i3bar_command i3bar
-#
-#colors {
-#			#foreground 	$fg-color
-#			statusline #ffffff
-#			background	$bg-color	
-#		}
-#		tray_output primary
-#		tray_padding 0
-#		workspace_min_width 30
-#		#separator_symbol ""
-#		# separator_symbol "⏽"
-#		# output DVI-I-2
-#		# font pango: Iosevka Term Bold Oblique 15
-#
-#
-#		#font Iosevka Oblique 15
-#		font pango: Iosevka 13
-#
-#		#strip_workspace_numbers yes
-#
-#
-#		position	top
-#        status_command i3blocks
-#
-#}
-# Moving workspaces between screens 
-#bindsym $mod+p move workspace to output right
-
-#backlight
-#as per https://bbs.archlinux.org/viewtopic.php?id=230932
-
-#bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 100
-#bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 100
-#
-#bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-#bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
