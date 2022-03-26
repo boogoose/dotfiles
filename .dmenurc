@@ -4,7 +4,8 @@
 
 # define the font for dmenu to be used
 # for Desktop - "Iosevka 17"
-DMENU_FN="Iosevka-14"
+# for Laptop - "Iosevka 14"
+DMENU_FN="Iosevka-17"
 
 # background colour for unselected menu-items
 DMENU_NB="#161925"
