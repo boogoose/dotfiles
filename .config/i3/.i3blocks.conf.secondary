@@ -1,0 +1,89 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+#command=/usr/lib/i3blocks/$BLOCK_NAME
+command=$HOME/.config/i3blocks/$BLOCK_NAME
+separator_block_width=20
+markup=pango
+align=top
+
+#[packages]
+#command=packages
+#label=
+#command=$HOME/.config/i3blocks/scripts/arch-update
+#label=<span bgcolor='#000000bb'></span>
+#interval=300
+#color=#0000ff
+
+#[memoryArename]
+#label=
+#label=
+#label=
+#instance=mem;free
+#instance=mem;used
+#instance=mem;total
+#interval=20
+
+#[cpu]
+#label=
+#label=龍
+#label=
+#label=
+#label=
+#label=﬙
+#label=
+#interval=2
+
+#[temparchon]
+#instance=Core
+#label=
+#label=
+#label=
+#label=<span color='#ffa500'></span>
+#label=
+#label=
+#interval=5
+
+#[trash]
+#label=
+#interval=10
+
+#[backlight]
+##command=$SCRIPT_DIR/backlight
+#command=$HOME/.config/i3blocks/scripts/backlight
+#label=☀
+#interval=20
+##STEP_SIZE=5
+##USE_SUDO=0
+
+[datetime]
+label=
+#label=<span bgcolor='#000000bb'> </span>
+interval=5
+
+[audio]
+label=
+interval=5
