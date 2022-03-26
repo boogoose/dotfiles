@@ -4,7 +4,8 @@
 #                                      Patching the lightdm deficit                               #
 ###################################################################################################
 #
-#if [ $COMPUTER=x220 ] ; then
+#if [ $COMPUTER == "x220" ]
+#		then
 #		source $HOME/.config/shell/Shell_Exports
 #		[ -f ~/.Xmodmap ] && . ~/.Xmodmap
 #fi
@@ -34,8 +35,7 @@ if [ $COMPUTER == "desktop" ]
 		#feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* feh --bg-fill -randomize ~/Pictures/wallpaper1600x1200/* &
 		#DISPLAY=:0.0 feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* &
 		#DISPLAY=:0.1 feh --bg-fill --randomize ~/Pictures/wallpaper1200x1600/* &
-fi
-if [ $COMPUTER == "x220" ]
+elif [ $COMPUTER == "x220" ]
 		then
 		#feh --bg-fill ~/Pictures/Wallpaper/deserted.jpeg
 		feh --no-fehbg --bg-fill '/home/yousir/Pictures/Wallpaper/deserted.jpg' 
