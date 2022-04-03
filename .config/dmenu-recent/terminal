@@ -30,3 +30,7 @@ shutdown
 lvim
 bc
 createi3config
+kscheck
+ksoff
+kson
+wiki-x

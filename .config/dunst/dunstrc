@@ -34,7 +34,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 10x50
+    offset = 0x32
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -191,10 +191,10 @@
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
     # max_icon_size takes precedence over this.
-    min_icon_size = 0
+    min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 64
 
     # Paths to default icons.
     #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/scalable/devices/
@@ -375,6 +375,17 @@
 #
 # NOTE: It might be helpful to run dunst -print in a terminal in order
 # to find fitting options for rules.
+[play_sound]
+		summary = "*"
+		script = alert.sh
+
+[play_sound_warning]
+		icon = /usr/share/icons/Papirus-Dark/48x48/status/dialog-error.svg
+		script = alert_warning.sh
+
+[play_sound_success]
+		icon = /usr/share/icons/breeze-dark/actions/32@2x/system-lock-screen.svg
+		script = alert_success.sh
 
 # Disable the transient hint so that idle_threshold cannot be bypassed from the
 # client

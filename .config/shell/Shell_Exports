@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/scripts:$HOME/.local/bin/Applications:$HOME/.local/bin/VMs"
+export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/scripts:$HOME/.local/bin/Applications:$HOME/.local/bin/VMs:$HOME/.local/bin/network"
 #export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/*"
 
 
@@ -20,4 +20,11 @@ export XDG_DATA_HOME=$HOME/.local/share
 export FONTCONFIG_PATH=/etc/fonts
 export QT_QPA_PLATFORMTHEME=qt5ct
 export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger config
+
+
+# LIBVIRT DEFAULT URI
+# See: https://serverfault.com/questions/803283/how-do-i-list-virsh-networks-without-sudo
+# See: https://libvirt.org/uri.html#URI_default
+
+export LIBVIRT_DEFAULT_URI=qemu:///system
 
