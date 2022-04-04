@@ -1,6 +1,7 @@
 #!/bin/bash
 #virsh start VMA-clone1b
 # alacritty -e sudo virsh start VMA-clone1b
-sudo /usr/bin/virsh start codn
+#sudo /usr/bin/virsh start codn
+/usr/bin/virsh start codn
 exec i3-msg 'workspace 6:code  ; exec virt-viewer -c qemu:///system codn'
 

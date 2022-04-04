@@ -60,3 +60,5 @@ browser
 archgo
 vscodium
 alert.sh
+memtest86+
+tempvm
