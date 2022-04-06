@@ -1,6 +1,6 @@
 #!/bin/bash
 #virsh start VMA-clone1b
 # alacritty -e sudo virsh start VMA-clone1b
-sudo /usr/bin/virsh start webn
+/usr/bin/virsh start webn
 exec i3-msg 'workspace 10:web 爵 ; exec virt-viewer -c qemu:///system webn'
 

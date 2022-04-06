@@ -1,6 +1,6 @@
 #!/bin/bash
 #virsh start VMA-clone1b
 # alacritty -e sudo virsh start VMA-clone1b
-sudo /usr/bin/virsh start shopping
+/usr/bin/virsh start shopping
 exec i3-msg 'workspace 9:shop  ; exec virt-viewer -c qemu:///system shopping'
 #   

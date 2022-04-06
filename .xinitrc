@@ -13,7 +13,7 @@
 
 #####################################################################
 
-if [ $COMPUTER == "x220" ]
+if [[ $COMPUTER == "x220" || $COMPUTER == "Vmachine" ]]
 		then
 		createi3config
 fi

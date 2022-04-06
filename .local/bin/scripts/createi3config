@@ -5,4 +5,9 @@ if [ $COMPUTER=x220 ] ; then
 		touch $HOME/.config/i3/config
 		cat $HOME/.config/i3/config_x220 >> $HOME/.config/i3/config
 fi
-	
+if [ $COMPUTER=Vmachine ] ; then
+		rm $HOME/.config/i3/config
+		touch $HOME/.config/i3/config
+		cat $HOME/.config/i3/config_vm >> $HOME/.config/i3/config
+fi
+

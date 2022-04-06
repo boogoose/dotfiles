@@ -19,6 +19,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 
 export FONTCONFIG_PATH=/etc/fonts
 export QT_QPA_PLATFORMTHEME=qt5ct
+export GNUPGHOME=$HOME/.config/gnupg
 export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger config
 
 

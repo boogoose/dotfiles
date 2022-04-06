@@ -1,5 +1,5 @@
 #!/bin/bash
 #virsh start VMA-clone1b
 # alacritty -e sudo virsh start VMA-clone1b
-sudo /usr/bin/virsh start VMA-clone1b
+/usr/bin/virsh start VMA-clone1b
 virt-viewer -c qemu:///system VMA-clone1b
