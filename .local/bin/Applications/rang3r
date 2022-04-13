@@ -1,4 +1,0 @@
-#!/bin/bash
-# $TERMINAL -e ranger
-alacritty -e ranger
-

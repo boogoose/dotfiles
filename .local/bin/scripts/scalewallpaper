@@ -1,3 +1,0 @@
-#!/bin/bash
-
-feh --bg-scale --no-xinerama --randomize ~/Pictures/wallpaper2560x1440/* &

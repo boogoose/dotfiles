@@ -1,3 +1,0 @@
-#!/bin/bash
-
-DISPLAY=:0 feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* &
