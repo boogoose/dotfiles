@@ -17,7 +17,8 @@ colors:
     blue: "#569CD6"
     magenta: "#C586C0"
     cyan: "#29B8DB"
-    white: "#abb2bf"
+      #white: "#abb2bf"
+    white: "#ffffff"
 
   # Bright colors
   bright:
@@ -28,8 +29,8 @@ colors:
     blue: "#569CD6"
     magenta: "#C586C0"
     cyan: "#29B8DB"
-    white: "#ECEFF4"
-
+      #white: "#ECEFF4"
+    white: "#ffffff"
 font:
   # The normal (roman) font face to use.
   normal:
@@ -65,7 +66,7 @@ font:
     x: 0
     y: 0
 window:
-  opacity: 0.8
+  opacity: 1
   
   padding:
     x: 2

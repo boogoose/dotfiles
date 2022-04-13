@@ -32,6 +32,7 @@ set splitright          " Vertical splits will automatically be to the right
 set nobackup            " This is recommended by coc
 set nowritebackup       " This is recommended by coc
 set ruler               " Find the cursor!
+" set termguicolors		" See: https://www.reddit.com/r/KittyTerminal/comments/o4n2o6/how_do_you_enable_true_color/
 " set colorcolumn=80
 set tabstop=4
 " set softtabstop=4

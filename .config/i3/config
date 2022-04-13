@@ -23,7 +23,7 @@ gaps inner 0
 gaps outer 0
 
 # Disable window titlebars entirely
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 
 # Font for windows titles and also bar (unless otherwise specified)
@@ -524,7 +524,11 @@ colors {
 
 
 		#font pango: Iosevka Oblique 20
-		font pango: Iosevka 15
+		#font pango: Iosevka 15
+		#font pango: hack nerd font 13
+		#font pango: FontAwesome, Iosevka Nerd Font 16 
+		font pango: FontAwesome 
+		font pango: Iosevka Nerd Font 16
 
 		#strip_workspace_numbers yes
 
@@ -541,7 +545,7 @@ bar {
 
 		# font pango: Iosevka Term Bold Oblique 15
 
-		font pango: Iosevka 15
+		font pango: Iosevka Nerd Font 15
 
 		position top
         #status_command i3blocks

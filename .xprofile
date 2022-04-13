@@ -29,16 +29,16 @@ xset s noblank
 #                                      Wallpaper                                                   #
 ####################################################################################################
 
-if [ $COMPUTER == "desktop" ]
+if [ $COMPUTER == "desktop" || $COMPUTER == "Vmachine" ]
 		then
-		feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* & #feh --bg-fill --randomize ~/Pictures/wallpaper1200x1600/* &
+		feh --bg-fill --randomize ~/Pictures/wallpaper/wallpaper2560x1440/* & #feh --bg-fill --randomize ~/Pictures/wallpaper1200x1600/* &
 		#feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* feh --bg-fill -randomize ~/Pictures/wallpaper1600x1200/* &
 		#DISPLAY=:0.0 feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* &
 		#DISPLAY=:0.1 feh --bg-fill --randomize ~/Pictures/wallpaper1200x1600/* &
 elif [ $COMPUTER == "x220" ]
 		then
 		#feh --bg-fill ~/Pictures/Wallpaper/deserted.jpeg
-		feh --no-fehbg --bg-fill '/home/yousir/Pictures/Wallpaper/deserted.jpg' 
+		feh --no-fehbg --bg-fill ~/Pictures/wallpaper/deserted.jpg 
 fi
 
 ###################################################################################################
@@ -49,6 +49,15 @@ xset +fp ~/.local/share/fonts/  # Prepend custom font path to Xorg's list of kno
 xset r rate 400 40             	# Set typematic delay
 
 ###################################################################################################
+#                                     Vmachine Specific                                           #
+###################################################################################################
+
+if [ $COMPUTER == "Vmachine" ]
+		then
+		xrandr --output Virtual-1 --mode 2560x1440
+		spice-vdagent &
+fi
+
 #xrandr --output Virtual1 --mode 1600x1200     # Set display parameters in Virtualbox
 #xrandr --output DVI-I-1 --mode 2560x1440
 #xrandr --output DVI-I-2 --mode 1600x1200 --rotate left

@@ -32,8 +32,30 @@ Size=24
 Context=Applications
 Type=Fixed
 
+[status/22@2x]
+Size=22
+Scale=2
+#Context=Devices
+Context=Status
+Type=Fixed
+
+
+#22x22 - Fixed size - Icon(s) for Plasma theme/System Tray. Not particularly used on Plasma. - DO_NOT_USE_ANYWHERE_ELSE - Monochrome
+[status/22]
+Size=22
+Context=Status
+Type=Fixed
+
+##22x22@2x - Fixed size - Icon(s) for Plasma theme/System Tray. Not particularly used on Plasma. - DO_NOT_USE_ANYWHERE_ELSE - Monochrome
 #[status/22@2x]
 #Size=22
 #Scale=2
-#Context=Devices
+#Context=Status
+#Type=Fixed
+#
+##22x22@3x - Fixed size - Icon(s) for Plasma theme/System Tray. Not particularly used on Plasma. - DO_NOT_USE_ANYWHERE_ELSE - Monochrome
+#[status/22@3x]
+#Size=22
+#Scale=3
+#Context=Status
 #Type=Fixed

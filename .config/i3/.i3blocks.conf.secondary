@@ -81,6 +81,9 @@ align=top
 
 [datetime]
 label=
+#label='\ue384'
+#label=e384
+#label=<BS>
 #label=<span bgcolor='#000000bb'> </span>
 interval=5
 
