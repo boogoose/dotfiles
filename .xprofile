@@ -29,7 +29,8 @@ xset s noblank
 #                                      Wallpaper                                                   #
 ####################################################################################################
 
-if [ $COMPUTER == "desktop" || $COMPUTER == "Vmachine" ]
+#if [ $COMPUTER == "desktop" ]
+if [[ $COMPUTER == "desktop" || $COMPUTER == "Vmachine" ]]
 		then
 		feh --bg-fill --randomize ~/Pictures/wallpaper/wallpaper2560x1440/* & #feh --bg-fill --randomize ~/Pictures/wallpaper1200x1600/* &
 		#feh --bg-fill --randomize ~/Pictures/wallpaper2560x1440/* feh --bg-fill -randomize ~/Pictures/wallpaper1600x1200/* &
