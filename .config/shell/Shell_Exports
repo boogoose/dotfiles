@@ -3,7 +3,6 @@
 export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/scripts:$HOME/.local/bin/Applications:$HOME/.local/bin/VMs:$HOME/.local/bin/network"
 #export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/*"
 
-
 export EDITOR=nvim                  
 export VISUAL=nvim
 export TERMINAL=alacritty               
@@ -24,10 +23,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export GNUPGHOME=$HOME/.config/gnupg
 export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger config
 
-
 # LIBVIRT DEFAULT URI
 # See: https://serverfault.com/questions/803283/how-do-i-list-virsh-networks-without-sudo
 # See: https://libvirt.org/uri.html#URI_default
-
 export LIBVIRT_DEFAULT_URI=qemu:///system
-
