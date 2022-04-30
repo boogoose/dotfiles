@@ -29,11 +29,11 @@ xset s noblank
 #                                     Vmachine Specific                                           #
 ###################################################################################################
 
-if [ $COMPUTER == "Vmachine" ]
-		then
-		xrandr --output Virtual-1 --mode 2560x1080
-		spice-vdagent &
-fi
+#if [ $COMPUTER == "Vmachine" ]
+#		then
+#		xrandr --output Virtual-1 --mode 2560x1080
+#		# spice-vdagent &
+#fi
 
 ####################################################################################################
 #                                      Wallpaper                                                   #
