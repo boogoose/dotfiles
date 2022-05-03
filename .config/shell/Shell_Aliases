@@ -13,7 +13,7 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 alias nvimrc='nvim ~/.config/nvim/'
 
 # confirm before overwriting something
-alias cp="cp -i"
+alias cp="cp"
 alias mv='mv -i'
 #alias rm='rm -i'
 

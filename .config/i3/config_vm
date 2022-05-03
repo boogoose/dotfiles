@@ -10,7 +10,7 @@
 # i3 config file (v4)
 
 # Start autotiling
-#exec_always --no-startup-id autotiling
+exec_always --no-startup-id autotiling
 
 set $mod Mod4
 
