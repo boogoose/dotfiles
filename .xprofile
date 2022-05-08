@@ -42,7 +42,8 @@ xset s noblank
 #if [ $COMPUTER == "desktop" ]
 if [[ $COMPUTER == "desktop" || $COMPUTER == "Vmachine" ]]
 		then
-		feh --bg-center ~/Pictures/wallpaper/wallpaper2560x1440/rocks_mist_rough_sea_stormy_weather-wallpaper-2560x1440.jpg  ~/Pictures/wallpaper/garden-g6144c50f6_1920.jpg
+		feh --bg-center ~/Pictures/wallpaper/wallpaper2560x1440/rocks_mist_rough_sea_stormy_weather-wallpaper-2560x1440.jpg  ~/Pictures/wallpaper/wallpaper_portrait/garden-gd60831243_1920.jpg
+		#https://pixabay.com/images/search/garden/?orientation=vertical&
 		#feh --bg-center ~/Pictures/wallpaper/wallpaper2560x1440/rocks_mist_rough_sea_stormy_weather-wallpaper-2560x1440.jpg  ~/Pictures/wallpaper/bubbles-gimped.jpg
 
 		#feh --bg-fill --randomize ~/Pictures/wallpaper/wallpaper2560x1440/* & #feh --bg-fill --randomize ~/Pictures/wallpaper1200x1600/* &
