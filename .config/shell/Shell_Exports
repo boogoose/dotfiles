@@ -27,3 +27,17 @@ export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger co
 # See: https://serverfault.com/questions/803283/how-do-i-list-virsh-networks-without-sudo
 # See: https://libvirt.org/uri.html#URI_default
 export LIBVIRT_DEFAULT_URI=qemu:///system
+
+# cs50.h variables as recommended by https://cs50.readthedocs.io/libraries/cs50/c/
+export CC="clang"
+# export CC="gcc"
+export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
+
+export LDLIBS="-lcrypt -lcs50 -lm"
+export LD_LIBRARY_PATH=/usr/local/lib	#cs50 rec. path
+#export LD_LIBRARY_PATH=/usr/lib		# 
+
+# additional failsafes:
+export LIBRARY_PATH=/usr/local/lib
+export C_INCLUDE_PATH=/usr/local/include
+

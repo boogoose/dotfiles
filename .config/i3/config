@@ -17,6 +17,7 @@ set $mod Mod4
 default_border pixel 2 
 default_floating_border normal
 #  hide_edge-borders none
+hide_edge_borders smart
 
 # Set inner / outer gaps
 gaps inner 0
@@ -106,8 +107,8 @@ bindsym $mod+a focus parent
 #exec_always --no-startup-id ~/.config/i3/focus.py
 exec_always --no-startup-id ~/.config/i3/focus.py > test.log 2>&1
 
-set $monitor1 "DVI-I-2"
-set $monitor2 "DVI-I-3"
+set $monitor1 "DP-2"
+set $monitor2 "HDMI-0"
 
 # 10 workspaces for primary monitor
 set $ws1 "1"
@@ -153,12 +154,105 @@ workspace $ws18 output $monitor2
 workspace $ws19 output $monitor2
 workspace $ws20 output $monitor2
 
-#############################################
+
+#
+#
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+#set $ws1 "1"
+#set $ws2 "2"
+#set $ws3 "3"
+#set $ws4 "4"
+#set $ws5 "5"
+#set $ws6 "6"
+#set $ws7 "7"
+#set $ws8 "8"
+#set $ws9 "9"
+#set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+#bindsym Mod1+1 workspace number $ws11
+#bindsym Mod1+2 workspace number $ws12
+
+
+
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# move focused container to workspace on secondary monitor
+        bindsym $mod+Shift+Control+1 move container to workspace $ws11
+        bindsym $mod+Shift+Control+2 move container to workspace $ws12
+        bindsym $mod+Shift+Control+3 move container to workspace $ws13
+        bindsym $mod+Shift+Control+4 move container to workspace $ws14
+        bindsym $mod+Shift+Control+5 move container to workspace $ws15
+        bindsym $mod+Shift+Control+6 move container to workspace $ws16
+        bindsym $mod+Shift+Control+7 move container to workspace $ws17
+        bindsym $mod+Shift+Control+8 move container to workspace $ws18
+        bindsym $mod+Shift+Control+9 move container to workspace $ws19
+        bindsym $mod+Shift+Control+0 move container to workspace $ws20
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+##########################################
+##########   Mode for Monitor 2 ##########
+##########################################
 #mode " " {
 #mode "" {
 #mode " " {
 #mode " " {
 mode " " {
+#mode "monitor 2" {
 
         # switch to workspace
         bindsym $mod+1 workspace number $ws11
@@ -405,94 +499,6 @@ bindsym $mod+r mode "resize"
 
 
 }
-#
-#
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
-#set $ws1 "1"
-#set $ws2 "2"
-#set $ws3 "3"
-#set $ws4 "4"
-#set $ws5 "5"
-#set $ws6 "6"
-#set $ws7 "7"
-#set $ws8 "8"
-#set $ws9 "9"
-#set $ws10 "10"
-
-# switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
-
-#bindsym Mod1+1 workspace number $ws11
-#bindsym Mod1+2 workspace number $ws12
-
-
-
-
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
-
-# move focused container to workspace on secondary monitor
-        bindsym $mod+Shift+Control+1 move container to workspace $ws11
-        bindsym $mod+Shift+Control+2 move container to workspace $ws12
-        bindsym $mod+Shift+Control+3 move container to workspace $ws13
-        bindsym $mod+Shift+Control+4 move container to workspace $ws14
-        bindsym $mod+Shift+Control+5 move container to workspace $ws15
-        bindsym $mod+Shift+Control+6 move container to workspace $ws16
-        bindsym $mod+Shift+Control+7 move container to workspace $ws17
-        bindsym $mod+Shift+Control+8 move container to workspace $ws18
-        bindsym $mod+Shift+Control+9 move container to workspace $ws19
-        bindsym $mod+Shift+Control+0 move container to workspace $ws20
-
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
 
 bindsym $mod+r mode "resize"
 
@@ -505,7 +511,7 @@ set $fg-color	 #ffffff
 #
 bar {
 
-		output DVI-I-2
+		output DP-2
 		#i3bar_command i3bar --transparency
 		i3bar_command i3bar
 
@@ -539,7 +545,7 @@ colors {
 }
 bar {
 		tray_output none
-		output DVI-I-3
+		output HDMI-0
 		status_command i3blocks -c ~/.config/i3/.i3blocks.conf.secondary
 
 

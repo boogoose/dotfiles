@@ -14,13 +14,14 @@ def on_focus(i3, e):
     for ws in ws_list:
         if ws.name == current_ws_name:
             print(ws.output)
-            if ws.output == 'DVI-I-2':
+            if ws.output == 'DP-2':
                 i3.command("mode default")
-            elif ws.output == 'DVI-I-3':
+            elif ws.output == 'HDMI-0':
                 #i3.command('mode  ')
                 #i3.command('mode ')
                 #i3.command('mode  ')
                 i3.command('mode  ')
+                #i3.command('mode monitor 2')
             else:
                 i3.command('mode default')
             break
