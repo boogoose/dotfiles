@@ -1,63 +1,128 @@
 # Colors (One Darker)
-colors:
-  # Default colors
-  primary:
-    background: "#000000"      
-    #background: "#1E1E1E"
-    # background: "#2E3440"
-    #foreground: "#D8DEE9"
-    foreground: "#ffffff"
+# colors:
+#   # Default colors
+#   primary:
+#     #background: "#0A0505"
+#     #background: "#000000"      
+#     #background: "#1E1E1E"
+#     #background: "#2E3440"
+#     #foreground: "#D8DEE9"
+#     foreground: "#ffffff"
+#
+#   # Normal colors
+#   normal:
+#     black: "#3B4252"
+#     red: "#D54646"
+#     green: "#23D18B"
+#     yellow: "#D7BA7D"
+#     blue: "#569CD6"
+#     magenta: "#C586C0"
+#     cyan: "#29B8DB"
+#       #white: "#abb2bf"
+#     white: "#ffffff"
+#
+#   # Bright colors
+#   bright:
+#     black: "#3B4252"
+#     red: "#D54646"
+#     green: "#23D18B"
+#     yellow: "#D7BA7D"
+#     blue: "#569CD6"
+#     magenta: "#C586C0"
+#     cyan: "#29B8DB"
+#       #white: "#ECEFF4"
+#     white: "#ffffff"
 
-  # Normal colors
-  normal:
-    black: "#3B4252"
-    red: "#D54646"
-    green: "#23D18B"
-    yellow: "#D7BA7D"
-    blue: "#569CD6"
-    magenta: "#C586C0"
-    cyan: "#29B8DB"
-      #white: "#abb2bf"
-    white: "#ffffff"
-
-  # Bright colors
-  bright:
-    black: "#3B4252"
-    red: "#D54646"
-    green: "#23D18B"
-    yellow: "#D7BA7D"
-    blue: "#569CD6"
-    magenta: "#C586C0"
-    cyan: "#29B8DB"
-      #white: "#ECEFF4"
-    white: "#ffffff"
+# # TokyoNight Alacritty Colors
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x1a1b26'
+#     foreground: '0xc0caf5'
+#
+#   # Normal colors
+#   normal:
+#     black:   '0x15161e'
+#     red:     '0xf7768e'
+#     green:   '0x9ece6a'
+#     yellow:  '0xe0af68'
+#     blue:    '0x7aa2f7'
+#     magenta: '0xbb9af7'
+#     cyan:    '0x7dcfff'
+#     white:   '0xa9b1d6'
+#
+#   # Bright colors
+#   bright:
+#     black:   '0x414868'
+#     red:     '0xf7768e'
+#     green:   '0x9ece6a'
+#     yellow:  '0xe0af68'
+#     blue:    '0x7aa2f7'
+#     magenta: '0xbb9af7'
+#     cyan:    '0x7dcfff'
+#     white:   '0xc0caf5'
+import:
+  - ~/.themes/000IrregularTheming/alacritty/dist/rose-pine.yml
+# Colors (Gruvbox Material Dark Medium)
+# colors:
+#   primary:
+#     background: '0x282828'
+#     foreground: '0xdfbf8e'
+#
+#   normal:
+#     black:   '0x665c54'
+#     red:     '0xea6962'
+#     green:   '0xa9b665'
+#     yellow:  '0xe78a4e'
+#     blue:    '0x7daea3'
+#     magenta: '0xd3869b'
+#     cyan:    '0x89b482'
+#     white:   '0xdfbf8e'
+#
+#   bright:
+#     black:   '0x928374'
+#     red:     '0xea6962'
+#     green:   '0xa9b665'
+#     yellow:  '0xe3a84e'
+#     blue:    '0x7daea3'
+#     magenta: '0xd3869b'
+#     cyan:    '0x89b482'
+#
+#   indexed_colors:
+#     - { index: 16, color: '0xff9e64' }
+#     - { index: 17, color: '0xdb4b4b' }
+    
+  
 font:
   # The normal (roman) font face to use.
   normal:
-    #family: Hack $STEALTH
-    #family: Hack Stealth
-    family: Iosevka
+    # family: Hack $STEALTH
+    # family: Hack Stealth
+    family: Hack Nerd Font Mono
+    # family: Iosevka
 
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
+    family: Hack Nerd Font Mono
     # family: Hack Stealth
-    family: Iosevka
+    # family: Iosevka
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    #family: Hack Stealth
-    family: Iosevka
+    family: Hack Nerd Font Mono
+    # family: Hack Stealth
+    # family: Iosevka
     # Style can be specified to pick a specific face.
     # style: Italic
   # Size for laptop
   # size: 14.0
   # Size for desktop
-  size: 16.0
+  size: 15.0
 
   offset:
     x: 0
@@ -94,4 +159,4 @@ key_bindings:
     #- { key: +, mods: Control, action: IncreaseFontSize }
     #- { key: Subtract, mods: Control, action: DecreaseFontSize }
   - { key: Minus, mods: Control, action: DecreaseFontSize }
-  - { key: N, mods: Control, action: SpawnNewInstance }
+  #  - { key: N, mods: Control, action: SpawnNewInstance }  = conflicts with nvim bindings & redundant too
