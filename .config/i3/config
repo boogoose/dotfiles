@@ -3,9 +3,9 @@
 # Example Default colors
 # class                 border  backgr. text    indicator child_border
 # client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused          #ebbcba #ebbcba #ffffff #ebbcba #ebbcba
-# client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.focused          #9ccfd8 #9ccfd8 #ffffff #9ccfd8 #9ccfd8
+client.focused_inactive #1e1e1e #5f676a #ffffff #484e50   #1e2325
+# client.unfocused        #141414 #1a1a1a #888888 #1b2324   #151615
 # client.urgent           #2f343a #900000 #ffffff #900000   #900000
 # client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
@@ -24,7 +24,7 @@ default_floating_border normal
 hide_edge_borders smart
 
 # Set inner / outer gaps
-gaps inner 3
+gaps inner 0
 gaps outer 0
 
 # Disable window titlebars entirely
@@ -32,7 +32,7 @@ gaps outer 0
 
 # for_window [class="^.*"] border pixel 3
 
-for_window [class="client.unfocused"] border pixel 0
+for_window [class="client.unfocused"] buorder pixel 0
 
 for_window [class="client.focused_inactive"] border pixel 0
 # for_window [class="client.unfocused"] border pixel 0

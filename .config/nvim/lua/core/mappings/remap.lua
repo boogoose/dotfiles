@@ -69,7 +69,10 @@ vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()')
 -- )
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
   {silent = true, noremap = true}
+)
 -- -----------------------------------------------------------------------------
 -- vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
+-- -----------------------------------------------------------------------------
+vim.keymap.set('n', "H", [[<Cmd>bp<CR>]])
+vim.keymap.set('n', "L", [[<Cmd>bn<CR>]])
 
-)
