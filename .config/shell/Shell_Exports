@@ -18,6 +18,9 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
+export _ZO_DATA_DIR=$XDG_DATA_HOME/zsh/
+export _ZO_ECHO=1   # z will print matched directory before navigating to it
+
 export FONTCONFIG_PATH=/etc/fonts
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GNUPGHOME=$HOME/.config/gnupg
@@ -28,7 +31,9 @@ export RANGER_LOAD_DEFAULT_RC=FALSE     # Prevent duplicate loading of Ranger co
 # See: https://libvirt.org/uri.html#URI_default
 export LIBVIRT_DEFAULT_URI=qemu:///system
 
+# --------------------------------------------------------------------------------
 # cs50.h variables as recommended by https://cs50.readthedocs.io/libraries/cs50/c/
+# --------------------------------------------------------------------------------
 export CC="clang"
 # export CC="gcc"
 export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"

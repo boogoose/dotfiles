@@ -76,3 +76,6 @@ vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
 vim.keymap.set('n', "H", [[<Cmd>bp<CR>]])
 vim.keymap.set('n', "L", [[<Cmd>bn<CR>]])
 
+--------------------------------------------------------------------------------
+--colorizer
+vim.keymap.set('n', "co", [[<Cmd>ColorizerToggle<CR>]])

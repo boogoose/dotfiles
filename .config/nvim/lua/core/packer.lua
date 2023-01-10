@@ -61,6 +61,9 @@ return require('packer').startup(function(use)
 
 -- misc
     --use ('ja-ford/delaytrain.nvim')   -- Train yourself to stop repeating keys... gently
+    --use 'nanotee/zoxide.vim'
+    use ('lewis6991/impatient.nvim') -- Speeds up loading of Lua modules
+    use ('norcalli/nvim-colorizer.lua')
     use ('goolord/alpha-nvim')
     use ('kevinhwang91/rnvimr')
     use ('ggandor/leap.nvim')
@@ -75,6 +78,7 @@ return require('packer').startup(function(use)
     use ('folke/trouble.nvim')
     use ('folke/todo-comments.nvim')
     use ('ziontee113/color-picker.nvim')
+    use {'dhruvmanila/telescope-bookmarks.nvim', tag = "*"}
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
         end}
@@ -96,7 +100,7 @@ return require('packer').startup(function(use)
     --
     use({
         'rose-pine/neovim',
-        as = 'rose-pine',
+        as = 'rose-pine-moon',
         config = function()
         vim.cmd('colorscheme rose-pine')
         end

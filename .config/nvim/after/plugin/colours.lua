@@ -4,6 +4,14 @@ vim.cmd [[ colorscheme rose-pine ]]
 -- vim.cmd [[ colorscheme gruvbox ]]
 -- vim.cmd [[ colorscheme tokyonight-night ]]
 -- vim.cmd [[ colorscheme tokyonight-moon ]]
+-- ### Rose Pine ###
+-- config = function(
+--     as = 'rose-pine-moon',
+--     vim.cmd [[ colorscheme rose-pine ]]
+-- )
+-- end
+-- config()
+
 -- function ColourMyPencils(colour)
 -- 	--color = color or "rose-pine"
 -- 	--color = color or "onedark"

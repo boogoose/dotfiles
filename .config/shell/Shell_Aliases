@@ -7,15 +7,23 @@
 alias ls='ls --color=auto'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias rm='trash-put'
-alias grep='grep --colour=auto'	#colourises search-term in output
+
+#colourises search-term in output
+alias grep='grep --colour=auto'	
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+
 
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
 
+alias bmarks="nvim -c ':lua require(\"telescope\").extensions.bookmarks.bookmarks(opts)'"
+# alias bmarks="nvim -c ':Telescope bookmarks'"
+
 # confirm before overwriting something
-alias cp="cp"
+alias cp="cp -i"
 alias mv='mv -i'
-#alias rm='rm -i'
+alias rm='rm -i'
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes
@@ -27,6 +35,9 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
+# get top process eating ...
+alias psmem='ps auxf | sort -nr -k 4 |head -5'  # ... memory
+alias pscpu='ps auxf | sort -nr -k 3 |head -5'  # ... cpu
 #########################################################################################
 #                                  Archive EXtraction                                   # 
 #########################################################################################

@@ -17,15 +17,15 @@ def on_focus(i3, e):
             if ws.output == 'DP-2':
                 i3.command("mode default")
             elif ws.output == 'HDMI-0':
+                i3.command('mode  ')
                 # i3.command('mode  ')
                 # i3.command('mode ')
                 # i3.command('mode  ')
-                i3.command('mode  ')
                 # i3.command('mode monitor 2')
             else:
                 i3.command('mode default')
             break
-#        print(type(ws))
+        # print(type(ws))
 
 
 i3.on('workspace::focus', on_focus)

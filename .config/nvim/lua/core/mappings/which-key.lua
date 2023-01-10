@@ -100,7 +100,7 @@ local mappings = {
   -- q = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" }, -- this command isn't supported by my config
   ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
   -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-  c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  c = { "<cmd>bdelete!<CR>", "Close Buffer" },
   r = { "<cmd>RnvimrToggle<cr>", "Ranger"},
   -- t = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
   -- :lua require'lir.float'.toggle()
@@ -197,6 +197,9 @@ local mappings = {
   f = {
     name = "Find",
     -- b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+    -- b = { "<cmd>Telescope bookmarks<cr>", "Brave Bookmarks" },
+
+    b = { "<cmd>lua require('telescope').extensions.bookmarks.bookmarks(opts)<cr>", "Brave Bookmarks" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
     t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
