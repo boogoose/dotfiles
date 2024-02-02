@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/user1/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/user1/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/user1/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/user1/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/user1/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/user1/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?.lua;/home/user1/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?/init.lua;/home/user1/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?.lua;/home/user1/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/user1/.cache/nvim/packer_hererocks/2.1.1697887905/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -181,6 +181,11 @@ _G.packer_plugins = {
     path = "/home/user1/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/user1/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/user1/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -257,11 +262,6 @@ _G.packer_plugins = {
     path = "/home/user1/.local/share/nvim/site/pack/packer/start/rose-pine-moon",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["telescope-bookmarks.nvim"] = {
-    loaded = true,
-    path = "/home/user1/.local/share/nvim/site/pack/packer/start/telescope-bookmarks.nvim",
-    url = "https://github.com/dhruvmanila/telescope-bookmarks.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/user1/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -293,6 +293,11 @@ _G.packer_plugins = {
     path = "/home/user1/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  vimtex = {
+    loaded = true,
+    path = "/home/user1/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
+  },
   vimwiki = {
     loaded = true,
     path = "/home/user1/.local/share/nvim/site/pack/packer/start/vimwiki",
@@ -310,14 +315,14 @@ time([[Defining packer_plugins]], false)
 time([[Setup for markdown-preview.nvim]], true)
 try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rmarkdown\19mkdp_filetypes\6g\bvim\0", "setup", "markdown-preview.nvim")
 time([[Setup for markdown-preview.nvim]], false)
--- Config for: rose-pine-moon
-time([[Config for rose-pine-moon]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine-moon")
-time([[Config for rose-pine-moon]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
+-- Config for: rose-pine-moon
+time([[Config for rose-pine-moon]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine-moon")
+time([[Config for rose-pine-moon]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads

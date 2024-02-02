@@ -30,6 +30,8 @@ alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
 # get fastest mirrors
+
+alias mirrorgb="sudo reflector -f 30 -l 30 --number 10 --country GB --verbose --save /etc/pacman.d/mirrorlist"
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
@@ -38,6 +40,13 @@ alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pac
 # get top process eating ...
 alias psmem='ps auxf | sort -nr -k 4 |head -5'  # ... memory
 alias pscpu='ps auxf | sort -nr -k 3 |head -5'  # ... cpu
+
+alias j='z'
+alias f='zi'
+alias yay='paru'
+
+#alias gofire='sudo docker run -e DISPLAY -v $HOME/.Xauthority:/home/user1/.Xauthority --net=host myfire'
+alias ssht='TERM=xterm-256color ssh'
 #########################################################################################
 #                                  Archive EXtraction                                   # 
 #########################################################################################

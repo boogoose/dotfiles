@@ -1,4 +1,7 @@
 #!/bin/sh
+
+# zmodload zsh/zprof
+
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 
 export ZDOTDIR=$HOME/.config/zsh
@@ -11,13 +14,23 @@ SAVEHIST=1000000
 # source
 source "$HOME/.config/shell/Shell_Aliases"
 source "$HOME/.config/shell/Shell_Exports"
+# source "$HOME/.config/shell/pomodoro.sh"
+
+source /usr/share/nvm/init-nvm.sh
+
+# The following lines were added by compinstall
+
+# zstyle ':completion:*' completer _complete _ignored
+# zstyle :compinstall filename '/home/user1/.config/zsh/.zshrc'
+#
+# autoload -Uz compinit
+# compinit
+# End of lines added by compinstall
 
 # eval
 eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
 
 # plugins
-plug "esc/conda-zsh-completion"
 plug "zsh-users/zsh-autosuggestions"
 plug "hlissner/zsh-autopair"
 plug "zap-zsh/supercharge"
@@ -27,13 +40,33 @@ plug "zap-zsh/fzf"
 plug "zap-zsh/exa"
 plug "zsh-users/zsh-syntax-highlighting"
 
+# compinit
+# autoload -Uz compinit
+# compinit
+
 # keybinds
+
 bindkey '^ ' autosuggest-accept
 
-# export PATH="$HOME/.local/bin":$PATH
-fpath+=$HOME/.config/zsh/conda-zsh-completion/
+# autoload -U up-line-or-beginning-search
+# autoload -U down-line-or-beginning-search
+# autoload -U forward-word
+# autoload -U backward-word
+# zle -N up-line-or-beginning-search
+# zle -N down-line-or-beginning-search
+# zle -N forward-word
+# zle -N vi-forward-word
+# zle -N backward-word
+#
+# bindkey -v
+#
+# bindkey "^j" down-line-or-beginning-search # Down
+# bindkey "^k" up-line-or-beginning-search
+# bindkey "^w" forward-word
+# bindkey -s "^b" backward-word
 
-# if command -v bat &> /dev/null; then
-#   alias cat="bat -pp --theme \"Visual Studio Dark+\"" 
-#   alias catt="bat --theme \"Visual Studio Dark+\"" 
-# fi
+# source "$ZDOTDIR/zsh-vim-mode"
+
+export PATH="$HOME/.local/bin":$PATH
+
+# zprof

@@ -42,8 +42,12 @@ xset s noblank
 #if [ $COMPUTER == "desktop" ]
 if [[ $COMPUTER == "desktop" || $COMPUTER == "Vmachine" ]]
 		then
+        #DISPLAY=:0.0 feh --bg-fill ~/Downloads/blockwavemoon.png 
+        #DISPLAY=:0.1 feh --bg-fill ~/Downloads/blockwavemoonp.png
+        #feh --bg-fill ~/Downloads/blockwavemoon.png
+        feh --bg-fill ~/Downloads/blockwavemoon.png ~/Downloads/blockwavemoonp.png
 		# feh --bg-center ~/Pictures/wallpaper/wallpaper2560x1440/rocks_mist_rough_sea_stormy_weather-wallpaper-2560x1440.jpg  ~/Pictures/wallpaper/wallpaper_portrait/garden-gd60831243_1920.jpg
-		feh --bg-center ~/Pictures/wallpaper/wallpaper2560x1440/rocks_mist_rough_sea_stormy_weather-wallpaper-2560x1440.jpg  ~/Pictures/wallpaper/wallpaper_portrait/pink-beach-gdccf51611_1920.jpg
+		# feh --bg-center ~/Pictures/wallpaper/wallpaper2560x1440/rocks_mist_rough_sea_stormy_weather-wallpaper-2560x1440.jpg  ~/Pictures/wallpaper/wallpaper_portrait/pink-beach-gdccf51611_1920.jpg
 		#https://pixabay.com/images/search/garden/?orientation=vertical&
 		#feh --bg-center ~/Pictures/wallpaper/wallpaper2560x1440/rocks_mist_rough_sea_stormy_weather-wallpaper-2560x1440.jpg  ~/Pictures/wallpaper/bubbles-gimped.jpg
 

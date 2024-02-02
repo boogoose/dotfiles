@@ -25,34 +25,34 @@ require('telescope').setup {
                                             -- the default case_mode is "smart_case"
         },
         -- ### telescope-bookmarks ###
-        bookmarks = {
-
-            selected_browser = 'brave',
-
-            -- Either provide a shell command to open the URL
-            url_open_command = 'brave',
-
-            -- Or provide the plugin name which is already installed
-            -- Available: 'vim_external', 'open_browser'
-            url_open_plugin = nil,
-
-            -- Show the full path to the bookmark instead of just the bookmark name
-            full_path = true,
-
-            -- Provide a custom profile name for Firefox browser
-            firefox_profile_name = nil,
-
-            -- Provide a custom profile name for Waterfox browser
-            waterfox_profile_name = nil,
-
-            -- Add a column which contains the tags for each bookmark for buku
-            buku_include_tags = false,
-
-            -- Provide debug messages
-            debug = false,
-        },
+        -- bookmarks = {
+        --
+        --     selected_browser = 'brave',
+        --
+        --     -- Either provide a shell command to open the URL
+        --     url_open_command = 'brave',
+        --
+        --     -- Or provide the plugin name which is already installed
+        --     -- Available: 'vim_external', 'open_browser'
+        --     url_open_plugin = nil,
+        --
+        --     -- Show the full path to the bookmark instead of just the bookmark name
+        --     full_path = true,
+        --
+        --     -- Provide a custom profile name for Firefox browser
+        --     firefox_profile_name = nil,
+        --
+        --     -- Provide a custom profile name for Waterfox browser
+        --     waterfox_profile_name = nil,
+        --
+        --     -- Add a column which contains the tags for each bookmark for buku
+        --     buku_include_tags = false,
+        --
+        --     -- Provide debug messages
+        --     debug = false,
+        -- },
   }
 }
 -- load_extensions, somewhere after setup function:
 require('telescope').load_extension('fzf')
-require('telescope').load_extension('bookmarks')
+-- require('telescope').load_extension('bookmarks')

@@ -5,16 +5,21 @@
 # define the font for dmenu to be used
 # for Desktop - "Iosevka 17"
 # for Laptop - "Iosevka 14"
+# DMENU_FN="Hack-17"
 DMENU_FN="Iosevka-17"
 
 # background colour for unselected menu-items
-DMENU_NB="#161925"
+# DMENU_NB="#161925"
+
+# DMENU_NB="#272532"  # Rose Pine theme
+DMENU_NB="#191724"  #Rose Pine
 
 # textcolour for unselected menu-items
 DMENU_NF="#fdfffc"
 
 # background colour for selected menu-items
-DMENU_SB="#235789"
+# DMENU_SB="#235789"
+DMENU_SB="#31748f" # Rose Pine
 
 # textcolour for selected menu-items
 DMENU_SF="#fdfffc"

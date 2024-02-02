@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
         {'neovim/nvim-lspconfig'},
         {'williamboman/mason.nvim'},
         {'williamboman/mason-lspconfig.nvim'},
+        {'jose-elias-alvarez/null-ls.nvim'}, -- 'required'?
 
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},
@@ -62,12 +63,21 @@ return require('packer').startup(function(use)
 -- misc
     --use ('ja-ford/delaytrain.nvim')   -- Train yourself to stop repeating keys... gently
     --use 'nanotee/zoxide.vim'
+    use ('lervag/vimtex')
     use ('lewis6991/impatient.nvim') -- Speeds up loading of Lua modules
     use ('norcalli/nvim-colorizer.lua')
     use ('goolord/alpha-nvim')
     use ('kevinhwang91/rnvimr')
     use ('ggandor/leap.nvim')
-    use ('lukas-reineke/indent-blankline.nvim') -- Add indentation guides even on blank lines
+    -- NOTE: This ugly fix below (inc the deactivation of the config file at /home/user1/.config/nvim/after/plugin/indent-blankline.lua.bak) was done to prevent error messages arising from the *breaking* changes made to version 3 of indent blankline. TODO: fix the way this is done so that it ties in with the style / practive of the rest of these nvim config files
+    -- 
+    --use ('lukas-reineke/indent-blankline.nvim') -- Add indentation guides even on blank lines
+    use {"lukas-reineke/indent-blankline.nvim", main = "ibl",
+opts = {
+    --char = '|',
+    char = '┊',
+    show_trailing_blankline_indent = false}
+}
     use ('folke/which-key.nvim')
     use ('vimwiki/vimwiki')
     use ('theprimeagen/harpoon')
@@ -78,7 +88,7 @@ return require('packer').startup(function(use)
     use ('folke/trouble.nvim')
     use ('folke/todo-comments.nvim')
     use ('ziontee113/color-picker.nvim')
-    use {'dhruvmanila/telescope-bookmarks.nvim', tag = "*"}
+    -- use {'dhruvmanila/telescope-bookmarks.nvim', tag = "*"}
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
         end}

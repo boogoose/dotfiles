@@ -12,3 +12,6 @@ lxsession &
 dunst &
 xbindkeys &
 #pasystray &	# after lxsession was actually operating, this systray app (along with syncthing) started automatically
+
+# pkill firewall-applet
+killfireapplet &

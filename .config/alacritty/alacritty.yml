@@ -99,6 +99,7 @@ font:
     # family: Hack $STEALTH
     # family: Hack Stealth
     family: Hack Nerd Font Mono
+    # family: Iec-Power-Symbols
     # family: Iosevka
 
     # Style can be specified to pick a specific face.

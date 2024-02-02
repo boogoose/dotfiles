@@ -21,7 +21,7 @@ lsp.set_preferences({
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'sumneko_lua',
+  'lua_ls',
 })
 
 lsp.nvim_workspace()
@@ -38,6 +38,23 @@ vim.diagnostic.config({
   underline = true,
   severity_sort = false,
   float = true,
+})
+
+-- --------------- CMP setup (currently just copied from https://github.com/VonHeikemen/lsp-zero.nvim)
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+cmp.setup({
+  sources = {
+    {name = 'path'},
+    {name = 'nvim_lsp'},
+    {name = 'buffer', keyword_length = 3},
+    {name = 'luasnip', keyword_length = 2},
+  },
+  mapping = {
+    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+  }
 })
 -- -----------------------------------------------------------------------------
 -- -- Not sure where's the best place for this code...

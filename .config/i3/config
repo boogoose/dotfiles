@@ -113,6 +113,9 @@ bindsym $mod+a focus parent
 #exec_always --no-startup-id ~/.config/i3/focus.py
 exec_always --no-startup-id ~/.config/i3/focus.py > test.log 2>&1
 
+# arguments - -n : not match do not show names, -u : uniq - remove duplicate icons in case multiple instances of app in one workspace.
+# exec_always --no-startup-id exec i3-workspace-names-daemon -u -n
+
 set $monitor1 "DP-2"
 set $monitor2 "HDMI-0"
 
@@ -162,29 +165,39 @@ workspace $ws20 output $monitor2
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-#set $ws1 "1"
-#set $ws2 "2"
-#set $ws3 "3"
-#set $ws4 "4"
-#set $ws5 "5"
-#set $ws6 "6"
-#set $ws7 "7"
-#set $ws8 "8"
-#set $ws9 "9"
-#set $ws10 "10"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+# bindsym $mod+1 workspace number $ws1
+# bindsym $mod+2 workspace number $ws2
+# bindsym $mod+3 workspace number $ws3
+# bindsym $mod+4 workspace number $ws4
+# bindsym $mod+5 workspace number $ws5
+# bindsym $mod+6 workspace number $ws6
+# bindsym $mod+7 workspace number $ws7
+# bindsym $mod+8 workspace number $ws8
+# bindsym $mod+9 workspace number $ws9
+# bindsym $mod+0 workspace number $ws10
 
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
 #bindsym Mod1+1 workspace number $ws11
 #bindsym Mod1+2 workspace number $ws12
 
@@ -252,6 +265,7 @@ mode "resize" {
 #mode "" {
 #mode " " {
 #mode " " {
+# mode " " {
 mode " " {
 #mode "monitor 2" {
     # Set inner / outer gaps

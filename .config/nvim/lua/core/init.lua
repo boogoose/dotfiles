@@ -4,3 +4,4 @@ require("core.vimwiki") -- not getting parsed in packer directory - perhaps 'cau
 -- require("core.markdown-preview")
 require("core.md2")
 require("core.rnvimr")
+require("core.vimscript.vimtex")

@@ -285,6 +285,12 @@ local mappings = {
     u = { "<cmd>LuaSnipUnlinkCurrent<cr>", "Unlink Snippet" },
   },
 
+  n = {
+    name = "null-ls",
+    -- f = { "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", "Format" }, -- this formulation's now deprecated
+    f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
+  },
+
   -- s = {
   --   name = "Surround",
   --   ["."] = { "<cmd>lua require('surround').repeat_last()<cr>", "Repeat" },

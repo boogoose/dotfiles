@@ -3,7 +3,7 @@
 
 include "/home/user1/.gtkrc-2.0.mine"
 gtk-theme-name="Rosepine-B"
-gtk-icon-theme-name="monotrayicontheme"
+gtk-icon-theme-name="rp-theme"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
