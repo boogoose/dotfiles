@@ -1,15 +1,3 @@
---local M = {}
---
---function M.setup()
---  local whichkey = require "which-key"
---
---  local conf = {
---    window = {
---      border = "single", -- none, single, double, shadow
---      position = "bottom", -- bottom, top
---    },
---  }
---
   local opts = {
     mode = "n", -- Normal mode
     prefix = "<leader>",
@@ -91,8 +79,8 @@ local mappings = {
   -- ["1"] = "which_key_ignore",
   -- a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Action" }, -- conflicts with harpoon mappings
   b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-  --e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  e = { "<cmd>RnvimrToggle<cr>", "Explorer" },
+  e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+  -- e = { "<cmd>RnvimrToggle<cr>", "Explorer" },
   v = { "<cmd>vsplit<cr>", "vsplit" },
   --h = { "<cmd>split<cr>", "split" },
   w = { "<cmd>w<CR>", "Write" },
@@ -101,7 +89,7 @@ local mappings = {
   ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
   -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   c = { "<cmd>bdelete!<CR>", "Close Buffer" },
-  r = { "<cmd>RnvimrToggle<cr>", "Ranger"},
+  -- r = { "<cmd>RnvimrToggle<cr>", "Ranger"},
   -- t = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
   -- :lua require'lir.float'.toggle()
   -- ["f"] = {
@@ -348,6 +336,12 @@ local mappings = {
       q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
       r = { "<cmd>TroubleToggle lsp_references<cr>", "lsp references" },
   },
+  q = {
+      name = "Gen",
+      v = { "<cmd>Gen Enhance_Grammar_Spelling<cr>", "Enhance Grammar"},
+      r = { "<cmd>Gen Review_Code<cr>", "Review Code"},
+      --z = { "<cmd>Gen<cr>"}
+  }
 
   -- z = {
   --   name = "Zen",
@@ -357,4 +351,5 @@ local mappings = {
   --   f = { "<cmd>TZFocus<cr>", "Focus" },
   -- },
 }
+ -- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
  which_key.register(mappings, opts)

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/scripts:$HOME/.local/bin/Applications:$HOME/.local/bin/VMs:$HOME/.local/bin/network"
+export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/scripts:$HOME/.local/bin/Applications:$HOME/.local/bin/VMs:$HOME/.local/bin/network:$HOME/.cargo/bin/"
 #export PATH="${PATH}:usr/bin:/$HOME/.local/bin:$HOME/.local/scripts:$HOME/.local/bin/*"
 
 export EDITOR=nvim                  
@@ -36,7 +36,7 @@ export LIBVIRT_DEFAULT_URI=qemu:///system
 # --------------------------------------------------------------------------------
 export CC="clang"
 # export CC="gcc"
-export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
+#export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
 
 export LDLIBS="-lcrypt -lcs50 -lm"
 export LD_LIBRARY_PATH=/usr/local/lib	#cs50 rec. path
